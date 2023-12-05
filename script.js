@@ -1,4 +1,3 @@
-/* ----- BASE ------ */
 "use strict";
 
 // get required selectors to maniplute menu toggle
@@ -19,7 +18,6 @@ const darkIcon = document.querySelector(".bxs-moon");
 
 var lightmode = localStorage.getItem("lightmode");
 
-// enable dark mode function
 const enableLightMode = () => {
   // add class dark mode to the body
   document.body.classList.add("lightmode");
@@ -33,7 +31,6 @@ if (lightmode && lightmode === "enabled") {
   enableLightMode();
 }
 
-// disable dark mode function
 const disableLightMode = () => {
   // remove class dark mode from the body
   document.body.classList.remove("lightmode");
@@ -43,7 +40,6 @@ const disableLightMode = () => {
   darkIcon.style.display = "none";
 };
 
-// active/deactive dark mode
 themeTogglers.addEventListener("click", () => {
   lightmode = localStorage.getItem("lightmode");
   if (!lightmode || lightmode !== "enabled") {
